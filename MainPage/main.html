@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SW Expense</title>
+    <link rel="stylesheet" href="./CSS/alapstyle.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/sliderstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img style="height: 50px;" src="./SW_white_no_text.png" alt=""><span class="navbar-brand" href="main.html"><span style="font-weight: bold; text-decoration: line-through">SW</span> Expense</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="../MainPage/main.html">Home</a>
+          <a class="nav-link" href="../Collection/collection.html">Collections</a>
+          <a class="nav-link" href="../ShopPage/shopxd.html">Shop</a>
+          <a class="nav-link" href="../AboutUs/aboutus.html">About us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+    
+      <div class="badi" >
+        <div class="slider">
+          <div class="slides">
+  
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+  
+            <div class="slide first">
+              <img class="img-fluid" src="S.P/CORE_COLLECTION_banner_white.png" alt="">
+            </div>
+            <div class="slide">
+              <img class="img-fluid" src="S.P/FLOWERS_COLLECTION_banner.png" alt="">
+            </div>
+            <div class="slide">
+              <img class="img-fluid" src="S.P/Grafity_coll_banner.png" alt="">
+            </div>
+  
+            <div class="navigation-auto">
+              <div hidden class="auto-btn1"></div>
+              <div hidden class="auto-btn2"></div>
+              <div hidden class="auto-btn3"></div>
+            </div> 
+            
+          </div>
+          <div  class="position-absolute bottom-0 start-50 translate-middle-x translate-middle-y">
+            <label for="radio1" class="manuel-btn"></label>
+            <label for="radio2" class="manuel-btn"></label>
+            <label for="radio3" class="manuel-btn"></label>
+        </div>
+        </div>
+      </div>
+
+      <div class="container-lg my-5">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <center><img class="img-fluid" src="../MainPage/S.P/insta promo.png" alt=""></center>
+          </div>
+          <div style="text-align: left;" class="col-lg-6 col-12">
+            <h2 class="mt-5">Check out our <a id="insta" href="https://instagram.com/sw_expensehu">Instagram Page</a> and catch up with latest drops, secret discount codes, collabs and new collections!</h2>
+          </div>
+        </div>
+      </div>
+  
+  <footer>
+    <div style="background-color: rgb(0, 0, 0); color: white; text-align: center;" class="container-fluid py-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-4 mt-3">
+            <h4>Other sites:</h5>
+            <a style="color: white;" href="../Collection/collection.html">Collections</a> <br>
+            <a style="color: white;" href="../ShopPage/shopxd.html">Shop</a> <br>
+            <a style="color: white;" href="../AboutUs/aboutus.html">About Us</a> <br>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>Check Us On Social Media:</h5>
+            <a style="color: white;" href="https://www.instagram.com/sw_expensehu/">Instagram</a>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>SW Expense</h5>
+            <p>All rights reserved. 2023</p>
+            <img style="height: 150px;" src="SW Black no text.png" alt="">
+          </div>
+        </div>
+      </div>      
+    </div>
+  </footer>
+  </div>
+    
+</body>
+<script type="text/javascript">
+  var counter = 1
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter>3){
+      counter = 1;
+    }
+  }, 5000);
+</script>
+</html>

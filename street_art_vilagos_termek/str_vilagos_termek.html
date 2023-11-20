@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termékek - SW Expense</title>
+    <link rel="stylesheet" href="../street_art_vilagos_termek/CSS/alapstyle.css">
+    <link rel="shortcut icon" href="SW white no text.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      .meretGomb
+      {
+        background-color: white;
+      }
+      .meretGomb:hover 
+      {
+        background-color: lightgray;
+      }
+      .kosarba:hover
+      {
+        filter: invert(100%);
+      }
+    </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img style="height: 50px;" src="./SW_white_no_text.png" alt=""><span class="navbar-brand" href="main.html"><span style="font-weight: bold; text-decoration: line-through">SW</span> Expense</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a style="color: black;" class="nav-link" href="../MainPage/main.html">Home</a>
+          <a style="color: black;" class="nav-link" href="collections.html">Collections</a>
+          <a style="color: black;" class="nav-link" href="../ShopPage/shopxd.html">Shop</a>
+          <a style="color: black;" class="nav-link" href="aboutus.html">About us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!--Main-->
+  <div class="py-3">
+    <div class="container-md">
+      <div class="row">
+            <!--Kép-->
+            <div class="col-lg-6 col-12 d-flex justify-content-lg-end justify-content-center">
+              <img src="vilhat.png" alt="" style="max-width: 100%; max-height: 550px;">
+            </div>
+            <!--Leírás MODUL-->
+            <div class="col-lg-6 col-12 align-middle" style="padding-top: 50px;">
+
+              <!--CÍM-->
+              <h2 class="pb-3 d-flex justify-content-lg-start justify-content-center">STREET ART - VILÁGOS HOODIE</h2>
+
+              <div class="d-flex justify-content-lg-start justify-content-center">
+                <!--AKCIÓS ÁR-->
+              <h4 style="display: inline; padding-right: 50px;">12.000 HUF</h4>
+
+              <!--RÉGI ÁR-->
+              <h4 style="color: red; text-decoration-line: line-through; display: inline;">20.000 HUF</h4>
+              </div>
+              
+
+              <!--AKCIÓ ÉRVÉNYES-->
+              <p style="font-size: 12px; padding-top: 5px;" class="d-flex justify-content-lg-start justify-content-center">Akció érvényes: 2023.11.11-2023.12.24</p>
+
+              <center>
+                <hr style="width: 100%;">
+              </center>
+              
+              <!--LEÍRÁS-->
+              <p class="d-flex justify-content-lg-start justify-content-center text-lg-start text-center">Egy vagány és egyedi stílust képviselő pulcsi, melyet egy lenyűgöző graffitis minta tesz különlegessé. Ez egy tökéletes választás a streetwear stílus kedvelőinek.</p>
+
+              <ul>
+                <li class="d-flex justify-content-lg-start justify-content-center"><span class="fw-bold">Méret:</span> S - XL</li>
+                <li class="d-flex justify-content-lg-start justify-content-center"><span class="fw-bold">Szín:</span> Világosszürke</li>
+                <li class="d-flex justify-content-lg-start justify-content-center"><span class="fw-bold">Anyag:</span> 61% poliészter, 39% pamut</li>
+              </ul>
+              <div class="text-center pb-0">
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretS">S</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretM">M</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretL">L</button>
+                <button class="meretGomb" style="width: 35px; height: 30px;" id="meretXL">XL</button>
+              </div>
+              <center>
+                <button class="btn kosarba mt-3" style="background-color: black; color: white;"><img id="termekfoto" src="bag_inv.png" alt="" style="width: 20px; margin-top: -5px; margin-right: 5px;">Kosárba</button>
+              </center>
+                
+            </div>
+          </div>
+    </div>
+    
+  </div>
+
+  <footer>
+    <div style="background-color: rgb(0, 0, 0); color: white; text-align: center;" class="container-fluid py-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-4 mt-3">
+            <h4>Other sites:</h5>
+            <a style="color: white;" href="collections.html">Collections</a> <br>
+            <a style="color: white;" href="../ShopPage/shopxd.html">Shop</a> <br>
+            <a style="color: white;" href="aboutus.html">About Us</a> <br>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>Check Us On Social Media:</h5>
+            <a style="color: white;" href="https://www.instagram.com/sw_expensehu/">Instagram</a>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>SW Expense</h5>
+            <p>All rights reserved. 2023</p>
+            <img style="height: 150px;" src="SW Black no text.png" alt="">
+          </div>
+        </div>
+      </div>      
+    </div>
+  </footer>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* core coll részleg */
+
+.collbanner {
+  --h: 480px;   /* height of the image */
+  --w: 920px;   /* width of the image*/
+  --b: 8px;     /* the border thickness*/
+  --g: 14px;    /* the gap */
+  --c: #000000; /* the color */
+  
+  width: var(--w);
+  cursor: pointer;
+  transition: .3s;
+}
+.collbanner:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+.collbanner + .collbanner{
+  border-radius: 50%;
+}
+
+
+.collbanner {
+  align-items: center;
+  gap: 50px;
+}
+
+/* Flower banner részleg */
+  
+  .flowerbanner {
+    --h: 480px;   /* height of the image */
+    --w: 920px;   /* width of the image*/
+    --b: 8px;     /* the border thickness*/
+    --g: 14px;    /* the gap */
+    --c: #ffffff; /* the color */
+    
+    
+    width: var(--w);
+    cursor: pointer;
+    transition: .3s;
+  }
+  .flowerbanner:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+  }
+  
+  .flowerbanner + .flowerbanner{
+    border-radius: 50%;
+  }
+  
+  
+  .flowerbanner {
+    align-items: center;
+    gap: 50px;
+  }
+
+/* Gradient  */  
+
+.grad{
+  background: #ffffff;
+  background:linear-gradient(#ffffff,#000000 20% ,  #000000);
+}
+
+/* graf banner */
+
+.grafbanner {
+  --h: 480px;   /* height of the image */
+  --w: 920px;   /* width of the image*/
+  --b: 8px;     /* the border thickness*/
+  --g: 14px;    /* the gap */
+  --c: #b71e11; /* the color */
+
+  width: var(--w);
+  cursor: pointer;
+  transition: .3s;
+}
+.grafbanner:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+.grafbanner + .grafbanner{
+  border-radius: 50%;
+}
+
+
+.grafbanner {
+  align-items: center;
+  gap: 50px;
+}
+
+/* shop now gombok */
+
+.corebtn
+{
+  color: white;
+  background-color: black;
+  border-color:black;
+  padding: 9px;
+  transition: .5s; 
+}
+
+.corebtn:hover
+{
+  color: black;
+  background-color: transparent;
+  border-color: white;
+}
+
+.grafbtn
+{
+  color: white;
+  background-color: #b71e11;
+  border-color: #b71e11;
+  padding: 9px;
+  transition: .5s; 
+}
+
+.grafbtn:hover
+{
+  color: white;
+  background-color: transparent;
+  border-color: #b71e11;
+}
+
+.flobtn
+{
+  color: white;
+  background-color: black;
+  border-color:white;
+  padding: 9px;
+  transition: .5s; 
+}
+
+.flobtn:hover
+{
+  color: black;
+  background-color: white;
+  border-color: white;
+}

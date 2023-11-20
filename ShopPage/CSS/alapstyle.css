@@ -1,0 +1,31 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding: 0 15px;
+}
+a::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: #ffffff;
+}
+a:hover::after{
+    width: 100%;
+}
+
+
+
