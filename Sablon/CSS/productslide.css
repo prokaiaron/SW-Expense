@@ -35,3 +35,16 @@
 
     width:80%;
   }
+
+.meretGomb
+{
+  background-color: white;
+}
+.meretGomb:hover 
+{
+  background-color: lightgray;
+}
+.kosarba:hover
+{
+  filter: invert(100%);
+}

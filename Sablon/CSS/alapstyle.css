@@ -3,7 +3,7 @@ body
     font-family: "Poppins", sans-serif;
 }
 
-.navbar a{
+nav a{
         position: relative;
         text-decoration: none;
         font-family: "Poppins", sans-serif;
@@ -13,7 +13,7 @@ body
         padding: 0 15px;
     }
 
-.navbar a::after{
+nav a::after{
         content: "";
         position: absolute;
         background-color: black;
@@ -24,11 +24,11 @@ body
         transition: 0.3s;
     }
 
-.navbar a:hover{
+nav a:hover{
         color: #ffffff;
     }
 
-.navbar a:hover::after{
+nav a:hover::after{
         width: 100%;
     }
 
