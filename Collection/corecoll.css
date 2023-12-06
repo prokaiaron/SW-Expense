@@ -1,0 +1,40 @@
+.galery{
+    
+    width: 720px;
+    height: 400px;
+    transition: 0.5s;
+    transition: ease-in;
+
+}
+.galery:hover{
+    transition: 0.5s;
+    transition: ease-out;
+    transform: rotate3d(1, 10, 0,   60deg);
+    content: url(../Pictures/main/CORE\ COLLECTION\ dark\ banner.png);
+}
+      
+      
+
+
+#getthem{
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+#getthem:hover{
+    background-color: white;
+    color: black;
+    font-size: 19px;
+    padding: 9px;
+    transition: 0.4s;
+
+}
+
+#gomb{
+    width: 35px ;
+}
+
+#gomb:hover{
+    width: 60px;
+}
