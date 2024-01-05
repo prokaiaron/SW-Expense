@@ -26,18 +26,18 @@ function Kosarba(id) {
 }
 
 let meret = 1;
-function MeretValtas() {
-  let size = this.id;
-  if (size == "meretS") {
+function MeretValtas(gombid) {
+  if (gombid == "meretS") {
     meret = 1;
   }
-  if (size == "meretM") {
+  if (gombid == "meretM") {
     meret = 2;
   }
-  if (size == "meretL") {
+  if (gombid == "meretL") {
     meret = 3;
   }
-  if (size == "meretXL") {
+  if (gombid == "meretXL") {
     meret = 4;
   }
+  console.log(gombid);
 }

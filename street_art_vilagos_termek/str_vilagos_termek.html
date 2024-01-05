@@ -112,7 +112,7 @@
 
               <div class="d-flex justify-content-lg-start justify-content-center">
                 <!--AKCIÓS ÁR-->
-              <h4 style="display: inline; padding-right: 50px;">12.000 HUF</h4>
+              <h4 style="display: inline; padding-right: 50px;">15.000 HUF</h4>
 
               <!--RÉGI ÁR-->
               <h4 style="color: red; text-decoration-line: line-through; display: inline;">20.000 HUF</h4>
@@ -135,13 +135,13 @@
                 <li class="d-flex justify-content-lg-start justify-content-center"><span class="fw-bold">Anyag:</span> 61% poliészter, 39% pamut</li>
               </ul>
               <div class="text-center pb-0">
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretS" onclick="MeretValtas()">S</button>
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretM" onclick="MeretValtas()">M</button>
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretL" onclick="MeretValtas()">L</button>
-                <button class="meretGomb" style="width: 35px; height: 30px;" id="meretXL" onclick="MeretValtas()">XL</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretS" onclick="MeretValtas(this.id)">S</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretM" onclick="MeretValtas(this.id)">M</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretL" onclick="MeretValtas(this.id)">L</button>
+                <button class="meretGomb" style="width: 35px; height: 30px;" id="meretXL" onclick="MeretValtas(this.id)">XL</button>
               </div>
               <center>
-                <button class="btn kosarba mt-3" style="background-color: black; color: white;" onclick="Kosarba(meret)"><img id="termekfoto" src="bag_inv.png" alt="" style="width: 20px; margin-top: -5px; margin-right: 5px;">Kosárba</button>
+                <button class="btn kosarba mt-3" style="background-color: black; color: white;" onclick="Kosarba('sv'+meret)"><img id="termekfoto" src="bag_inv.png" alt="" style="width: 20px; margin-top: -5px; margin-right: 5px;">Kosárba</button>
               </center>
                 
             </div>
