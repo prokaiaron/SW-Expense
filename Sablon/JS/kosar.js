@@ -1,5 +1,8 @@
 const termekek = [
-    {id: 1, nev: "Pulcsi", szin: "Fekete", meret: "M", egysegar: 10000, kep: "../Pictures/ruha/streetart/sotel.png"},
+    {id: "ss1", nev: "HOODIE", szin: "Sötétszürke", meret: "S", egysegar: 12000, kep: "../Pictures/ruha/streetart/sotel.png"},
+    {id: "ss2", nev: "HOODIE", szin: "Sötétszürke", meret: "M", egysegar: 12000, kep: "../Pictures/ruha/streetart/sotel.png"},
+    {id: "ss3", nev: "HOODIE", szin: "Sötétszürke", meret: "L", egysegar: 12000, kep: "../Pictures/ruha/streetart/sotel.png"},
+    {id: "ss4", nev: "HOODIE", szin: "Sötétszürke", meret: "XL", egysegar: 12000, kep: "../Pictures/ruha/streetart/sotel.png"},
 ];
 
 function Feltoltes() {
@@ -52,7 +55,10 @@ function Feltoltes() {
 
 function Torles(termekid) {
     let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
-    let ujkosar = kosar.filter(elemid => elemid != termekid);
-    localStorage.setItem("kosar", JSON.stringify(ujkosar));
+    let index_ = kosar.indexOf(termekid);
+    if (index_ != -1) {
+        kosar = kosar.splice(index_, 1)
+    }
+    localStorage.setItem("kosar", JSON.stringify(kosar));
     Feltoltes();
 }

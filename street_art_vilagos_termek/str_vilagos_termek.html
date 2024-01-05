@@ -25,6 +25,9 @@
           <a style="color: black;" class="nav-link" href="../ShopPage/shopxd.html">Shop</a>
           <a style="color: black;" class="nav-link" href="../AboutUs/aboutus.html">About us</a>
         </div>
+        <div class="pt-lg-0 pt-3 ps-lg-3 ps-0">
+          <a class="nav-link" href="../Kosár/kosar.html"><img src="../Pictures/main/kosar.png" alt="" style="max-width: 40px;"></a>
+        </div>
       </div>
     </div>
   </nav>
@@ -132,13 +135,13 @@
                 <li class="d-flex justify-content-lg-start justify-content-center"><span class="fw-bold">Anyag:</span> 61% poliészter, 39% pamut</li>
               </ul>
               <div class="text-center pb-0">
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretS">S</button>
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretM">M</button>
-                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretL">L</button>
-                <button class="meretGomb" style="width: 35px; height: 30px;" id="meretXL">XL</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretS" onclick="MeretValtas()">S</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretM" onclick="MeretValtas()">M</button>
+                <button class="meretGomb" style="width: 30px; height: 30px;" id="meretL" onclick="MeretValtas()">L</button>
+                <button class="meretGomb" style="width: 35px; height: 30px;" id="meretXL" onclick="MeretValtas()">XL</button>
               </div>
               <center>
-                <button class="btn kosarba mt-3" style="background-color: black; color: white;"><img id="termekfoto" src="bag_inv.png" alt="" style="width: 20px; margin-top: -5px; margin-right: 5px;">Kosárba</button>
+                <button class="btn kosarba mt-3" style="background-color: black; color: white;" onclick="Kosarba(meret)"><img id="termekfoto" src="bag_inv.png" alt="" style="width: 20px; margin-top: -5px; margin-right: 5px;">Kosárba</button>
               </center>
                 
             </div>
