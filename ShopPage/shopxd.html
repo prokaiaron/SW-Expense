@@ -28,24 +28,41 @@
       </div>
     </div>
   </nav>
+  <!-- SZŰRŐ -->
+  <div class="container-lg">
+    <button type="button" onclick="szuro()" class="btn btn-dark">Dark</button>
+    <div id="szurok" class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-12 justify-content-center">
+            <div class="col-lg-4 col-12" id="szurok">
+            <h4>Collection:</h4>
+            <select name="" id="">
+              <option id="core" value="">CORE</option>
+              <option id="flowers" value="">FLOWERS</option>
+              <option id="street" value="">STREET HEARTH</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
 
+        </div>
+        <div class="col-lg-4 col-12">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP -->
   <div style="margin-top: 150px;" class="container-lg">
-    <center><div class="col-lg-4 col-12" id="szurok">
-      <h4>Collection:</h4>
-      <select name="" id="">
-        <option value="">CORE</option>
-        <option value="">FLOWERS</option>
-        <option value="">STREET HEARTH</option>
-      </select>
-    </div></center>
-    <div class="row">
+    <div class="row mt-5">
       <div style="text-align: center;" class="col-lg-4 col-6">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""> <br>
         <p>FLOWERS Collection Hoodie</p>
         <p>24.900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6">
-        <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/core/CoreHoodieWhiBack.png" alt=""> <br>
+        <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
         <p>CORE Collection White Hoodie</p>
         <p>21.900 Ft.</p>
       </div>
@@ -80,6 +97,24 @@
       </div>      
     </div>
   </footer>
+
+  
+  <script>
+    
+    let szur = document.getElementById("szurok");
+    //szűrő eltüntetés/megjelenítés function
+    function szuro(){
+      if (szur.style.display = "block")
+      {
+        szur.style.display = "none";
+      }
+      else
+      {
+        szur.style.display = "block";
+      }
+    }
+
+  </script>
     
 </body>
 </html>
