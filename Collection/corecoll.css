@@ -1,17 +1,35 @@
-.galery{
+.gallery {
+    --g: 8px; /* the gap */
     
-    width: 720px;
-    height: 400px;
-    transition: 0.5s;
-    transition: ease-in;
-
-}
-.galery:hover{
-    transition: 0.5s;
-    transition: ease-out;
-    transform: rotate3d(1, 10, 0,   60deg);
-    content: url(../Pictures/main/CORE\ COLLECTION\ dark\ banner.png);
-}
+    display: grid;
+    clip-path: inset(1px); /* to avoid visual glitchs */
+  }
+  .gallery > .forgo {
+    --_p: calc(-1*var(--g));
+    grid-area: 1/1;
+    width: 720px; /* control the size */
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: .6s .2s;
+  }
+  .gallery > .forgo:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0 , 0 calc(100% + var(--_p)))
+  }
+  .gallery > .forgost-child {
+    clip-path: polygon(100% 100%, 100% calc(0% - var(--_p)), calc(0% - var(--_p)) 100%)
+  }
+  .gallery:hover > .forgost-child,
+  .gallery:hover > .forgorst-child:hover{
+    --_p: calc(50% - var(--g));
+  }
+  .gallery:hover > .forgorst-child,
+  .gallery:hover > .forgorst-child:hover + .forgo{
+    --_p: calc(-50% - var(--g));
+  }
+  
+  
+  
+  
       
       
 
