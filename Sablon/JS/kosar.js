@@ -17,20 +17,27 @@ function Feltoltes() {
     let tablazat = document.getElementById("kosarelemek");
     tablazat.innerHTML = "";
     
-    let termekdarab = {};
-    kosar_ids.forEach(elemid => {
-        if (!termekdarab[elemid]) 
+    let hozzaadva = [];
+    kosar_ids.forEach(elem => {
+        if (!hozzaadva.includes(elem))
         {
-            termekdarab[elemid] = 1;    
+            hozzaadva.push(elem);
         }
-        else
-        {
-            termekdarab[elemid]++;
-        }
-    })
+    });
 
+    let darab = [];
+    hozzaadva.forEach(elem => {
+        darab.push([elem, 0]);
+    });
+    
+    kosar_ids.forEach(elem => {
+        let darab_index = darab.findIndex(x => x[0] == elem);
+        darab[darab_index][1]++;
+    });
+    console.log(darab);
+    console.log(hozzaadva);
 
-    kosar_ids.forEach(elemid => {
+    hozzaadva.forEach(elemid => {
         if (kosar_ids.includes(elemid))
         {
             let termek = termekek.find(elem => elem.id == elemid);
@@ -74,39 +81,60 @@ function Feltoltes() {
             let egysegar1 = document.createElement("td");
             egysegar1.textContent = termek.egysegar;
             egysegar1.setAttribute("style", "vertical-align: middle;");
+            let egysegarid = "egysegar" + termek.id;
+            egysegar1.setAttribute("id", egysegarid);
             sor.appendChild(egysegar1);
 
+            let mennyiseg = darab[darab.findIndex(x => x[0] == termek.id)][1];
             let darab_cella = document.createElement("td");
             let darab_input = document.createElement("input");
             darab_input.setAttribute("type", "number");
-            darab_input.setAttribute("value", 1);
+            darab_input.setAttribute("value", mennyiseg);
             darab_input.setAttribute("style", "width: 40px;");
+            darab_input.setAttribute("min", 1);
+            let darabid = "darabszam" + termek.id;
+            darab_input.setAttribute("id", darabid);
+            darab_input.addEventListener("change", () => {
+                Add(termek.id);
+            });
             darab_cella.setAttribute("style", "vertical-align: middle;");
             darab_cella.appendChild(darab_input);
             sor.appendChild(darab_cella);
 
             let ar1 = document.createElement("td");
-            ar1.textContent = termek.egysegar;
+            ar1.textContent = termek.egysegar * mennyiseg;
             ar1.setAttribute("style", "vertical-align: middle;");
+            let vegosszegid = "vegosszeg" + termek.id;
+            ar1.setAttribute("id", vegosszegid);
             sor.appendChild(ar1);
 
             tablazat.appendChild(sor);
         }
         
     });
+    console.log(hozzaadva);
 }
 
 function Torles(termekid) {
     let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
-
-    for (let i = 0; i < kosar.length; i++)
-    {
-        if (kosar[i] == termekid)
-        {
-            kosar.splice(i, 1);
-        }
-    }
-
+    kosar = kosar.filter(elemid => elemid != termekid);
     localStorage.setItem("kosar", JSON.stringify(kosar));
     Feltoltes();
+}
+
+function Add(id) {
+    let kosar_ids = JSON.parse(localStorage.getItem("kosar")) || [];
+    kosar_ids.forEach(elem => {
+        let egysegarid = "egysegar" + elem;
+        let egysegar = document.getElementById(egysegarid).innerHTML;
+
+        let darabid = "darabszam" + elem;
+        let darab = document.getElementById(darabid).value;
+
+        let vegosszegid = "vegosszeg" + elem;
+        document.getElementById(vegosszegid).textContent = egysegar * darab;
+        
+    });
+    kosar_ids.push(id);
+    localStorage.setItem("kosar", JSON.stringify(kosar_ids));
 }
