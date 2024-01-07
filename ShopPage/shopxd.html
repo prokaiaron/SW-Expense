@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="../Sablon/CSS/alapstyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+        }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    .product-image {
+      transition: transform 0.5s;
+    }
+
+    .product-image:hover {
+      transform: scale(1.1);
+    }
+    </style>
 </head>
-<body onload="Szinvaltas()">
+<body style="font-family: Poppins, sans-serif;" onload="Szinvaltas()">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   
   <div>
@@ -38,21 +57,22 @@
           <a class="nav-link" href="../Kosár/kosar.html"><img src="../Pictures/main/kosar.png" alt="" style="max-width: 40px;"></a>
         </div>
       </div>
+
     </div>
   </nav>
- 
-  <div class="container-lg">
-    <button type="button" onclick="toggleFilter()" class="btn btn-dark">Dark</button>
-    <div id="szurok" class="container-fluid" style="display: none;">
+  <center><div class="fade-in" style="width: 100%; background-color: lightgrey;"><span style="font-size: 50px; font-family: Poppins, sans-serif;">SHOP</span></div></center>
+  <div class="container-lg my-5">
+    
+    <div  id="szurok" class="container-fluid mx-5 fade-in" >
       <div class="row">
         <div class="col-lg-4 col-12 justify-content-center">
             <div class="col-lg-4 col-12" id="szurok">
-            <h4>Collection:</h4>
+            <h4 style="font-family: Poppins, sans-serif;">Collection:</h4>
             <select id="collectionFilter" onchange="filterProducts()">
               <option value="">All</option>
               <option value="core">CORE</option>
-              <option value="flowers">FLOWERS</option>
-              <option value="street">STREET HEARTH</option>
+              <option value="flowers">FLOWER</option>
+              <option value="street">STREET HEART</option>
             </select>
           </div>
         </div>
@@ -60,48 +80,48 @@
       </div>
     </div>
   </div>
-
+ <div class="container fade-in">
+  <hr>
+ </div>
   <!--HA ÚJ TERMÉKET ADTOK HOZZÁ AZ ÁRÁHOZ ÍRJÁTOK BE CLASSNAK HOGY "shop-ar" NÉVNÉL PEDIG "shop-nev"!-->
   <!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
-  <div style="margin-top: 150px;" class="container-lg" id="productContainer">
+
+  <div style="margin-top: 25px;" class="container-lg fade-in" id="productContainer">
     <div class="row mt-5">
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""> <br>
-        <p class="shop-nev">FLOWERS Collection Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWERS Collection Hoodie</p>
         <p class="shop-ar">24900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
-        <p class="shop-nev">CORE Collection White Hoodie</p>
-        <p class="shop-ar">21900 Ft.</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
-        <p class="shop-nev">CORE Collection White Hoodie</p>
-        <p class="shop-ar">21900 Ft.</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
         <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
-        <p class="shop-nev">Street Hearth Dark Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Hearth Dark Hoodie</p>
         <p class="shop-ar">12000 Ft.</p>
-        <a href="../flowers_termek/flowers_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""></a> <br>
-        <p class="shop-nev">FLOWERS Collection Hoodie</p>
-        <p class="shop-ar">24900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
         <a href="../core_termékek/core_termékek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br></a>
-        <p class="shop-nev">CORE Collection White Hoodie</p>
-        <p class="shop-ar">21900 Ft.</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
         <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
-        <p class="shop-nev">Street Heart Dark Hoodie</p>
-        <p class="shop-ar">12000 Ft.</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Heart Dark Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
       </div>
       <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
         <a href="../street_art_vilagos_termek/str_vilagos_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/vilhat_nobg.png" alt=""> </a><br>
-        <p class="shop-nev">Street Heart Light Hoodie</p>
-        <p class="shop-ar">12000 Ft.</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Heart Light Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
       </div>
     </div>
   </div>
@@ -130,28 +150,48 @@
     </div>
   </footer>
 
+
   
   <script>
-    function toggleFilter() {
-      var szurok = document.getElementById("szurok");
-      szurok.style.display = szurok.style.display === "none" ? "block" : "none";
-    }
-
     function filterProducts() {
-      var collectionFilter = document.getElementById("collectionFilter").value.toLowerCase();
-      var products = document.querySelectorAll(".product-item");
+  var collectionFilter = document.getElementById("collectionFilter").value.toLowerCase();
+  var products = document.querySelectorAll(".product-item");
 
-      products.forEach(function(product) {
-        var productCollection = product.getAttribute("data-collection").toLowerCase();
+  products.forEach(function(product) {
+    var productCollection = product.getAttribute("data-collection").toLowerCase();
 
-        if (collectionFilter === "" || productCollection === collectionFilter) {
-          product.style.display = "block";
-        } else {
-          product.style.display = "none";
-        }
-      });
+    if (collectionFilter === "" || productCollection === collectionFilter) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
     }
+  });
+}
+
   </script>
+  <script>
+    function fadeInOnScroll() {
+     var fadeInElements = document.querySelectorAll('.fade-in');
+ 
+     for (var i = 0; i < fadeInElements.length; i++) {
+       var element = fadeInElements[i];
+       var elementTop = element.getBoundingClientRect().top;
+       var windowHeight = window.innerHeight;
+ 
+       if (elementTop < windowHeight) {
+         element.classList.add('show');
+       }
+     }
+   }
+ 
+   document.addEventListener('scroll', fadeInOnScroll);
+   document.addEventListener('DOMContentLoaded', function () {
+     fadeInOnScroll(); 
+     filterProducts(); 
+   });
+   </script>
+   
+
   <script src="../Sablon/JS/Penznem.js"></script>
   <script src="../Sablon/JS/ArAtiro.js"></script>
 </body>
