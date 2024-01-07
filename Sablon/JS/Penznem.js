@@ -4,6 +4,7 @@ function Penzvaltas(id) {
 }
 
 function Szinvaltas() {
+    console.log("lótusz");
     let penznem = JSON.parse(localStorage.getItem("penznem"));
     if (penznem == "huf")
     {
