@@ -200,7 +200,13 @@ function Vegosszeg() {
 
 function Penzvaltas(id) {
     localStorage.setItem("penznem", JSON.stringify(id));
-    if (id == "huf")
+    Feltoltes();
+    Szinvaltas();
+}
+
+function Szinvaltas() {
+    let penznem = JSON.parse(localStorage.getItem("penznem"));
+    if (penznem == "huf")
     {
         document.getElementById("hufId").setAttribute("class", "penznemGomb penznemGombSelect");
         document.getElementById("eurId").setAttribute("class", "penznemGomb");
@@ -210,7 +216,4 @@ function Penzvaltas(id) {
         document.getElementById("eurId").setAttribute("class", "penznemGomb penznemGombSelect");
         document.getElementById("hufId").setAttribute("class", "penznemGomb");
     }
-    Feltoltes();
-
 }
-
