@@ -34,12 +34,9 @@ function Feltoltes() {
         let darab_index = darab.findIndex(x => x[0] == elem);
         darab[darab_index][1]++;
     });
-    console.log(darab);
-    console.log(hozzaadva);
 
     hozzaadva.forEach(elemid => {
-        if (kosar_ids.includes(elemid))
-        {
+        
             let termek = termekek.find(elem => elem.id == elemid);
 
             let sor = document.createElement("tr");
@@ -59,7 +56,7 @@ function Feltoltes() {
             let img = document.createElement("img");
             img.src = termek.kep;
             img.width = 100;
-            kep.setAttribute("class", "d-none d-md-block");
+            kep.setAttribute("class", "d-none d-md-table-cell");
             kep.appendChild(img);
             sor.appendChild(kep);
 
@@ -83,6 +80,7 @@ function Feltoltes() {
             egysegar1.setAttribute("style", "vertical-align: middle;");
             let egysegarid = "egysegar" + termek.id;
             egysegar1.setAttribute("id", egysegarid);
+            egysegar1.setAttribute("class", "d-none d-md-table-cell")
             sor.appendChild(egysegar1);
 
             let mennyiseg = darab[darab.findIndex(x => x[0] == termek.id)][1];
@@ -109,10 +107,9 @@ function Feltoltes() {
             sor.appendChild(ar1);
 
             tablazat.appendChild(sor);
-        }
-        
     });
-    console.log(hozzaadva);
+
+   Vegosszeg();
 }
 
 function Torles(termekid) {
@@ -137,4 +134,23 @@ function Add(id) {
     });
     kosar_ids.push(id);
     localStorage.setItem("kosar", JSON.stringify(kosar_ids));
+    Vegosszeg();
+}
+
+function Vegosszeg() {
+    let kosar_ids = JSON.parse(localStorage.getItem("kosar")) || [];
+    let vegosszeg = 0;
+    let egyszer = [];
+    kosar_ids.forEach(elem => {
+        if (!egyszer.includes(elem))
+        {
+            egyszer.push(elem);
+        }
+    });
+    egyszer.forEach(elem => {
+        let vegosszegid = "vegosszeg" + elem;
+        let vegosszegelem = parseInt(document.getElementById(vegosszegid).innerHTML);
+        vegosszeg += vegosszegelem;
+    });
+    document.getElementById("fizetendo").innerHTML = vegosszeg;
 }
