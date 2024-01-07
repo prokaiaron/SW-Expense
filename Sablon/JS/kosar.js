@@ -1,28 +1,28 @@
 const termekek = [
-    {id: "ss1", nev: "HOODIE", szin: "Sötétszürke", meret: "S", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
-    {id: "ss2", nev: "HOODIE", szin: "Sötétszürke", meret: "M", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
-    {id: "ss3", nev: "HOODIE", szin: "Sötétszürke", meret: "L", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
-    {id: "ss4", nev: "HOODIE", szin: "Sötétszürke", meret: "XL", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
+    {id: "ss1", nev: "Street.", szin: "Sötétszürke", meret: "S", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
+    {id: "ss2", nev: "Street.", szin: "Sötétszürke", meret: "M", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
+    {id: "ss3", nev: "Street.", szin: "Sötétszürke", meret: "L", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
+    {id: "ss4", nev: "Street.", szin: "Sötétszürke", meret: "XL", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
 
-    {id: "sv1", nev: "HOODIE", szin: "Világosszürke", meret: "S", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
-    {id: "sv2", nev: "HOODIE", szin: "Világosszürke", meret: "M", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
-    {id: "sv3", nev: "HOODIE", szin: "Világosszürke", meret: "L", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
-    {id: "sv4", nev: "HOODIE", szin: "Világosszürke", meret: "XL", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
+    {id: "sv1", nev: "Street.", szin: "Világosszürke", meret: "S", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
+    {id: "sv2", nev: "Street.", szin: "Világosszürke", meret: "M", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
+    {id: "sv3", nev: "Street.", szin: "Világosszürke", meret: "L", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
+    {id: "sv4", nev: "Street.", szin: "Világosszürke", meret: "XL", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
 
-    {id: "cb1", nev: "HOODIE", szin: "Fekete", meret: "S", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
-    {id: "cb2", nev: "HOODIE", szin: "Fekete", meret: "M", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
-    {id: "cb3", nev: "HOODIE", szin: "Fekete", meret: "L", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
-    {id: "cb4", nev: "HOODIE", szin: "Fekete", meret: "XL", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.pjpg"},
+    {id: "cb1", nev: "Core c.", szin: "Fekete", meret: "S", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
+    {id: "cb2", nev: "Core c.", szin: "Fekete", meret: "M", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
+    {id: "cb3", nev: "Core c.", szin: "Fekete", meret: "L", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.jpg"},
+    {id: "cb4", nev: "Core c.", szin: "Fekete", meret: "XL", egysegar: 21900, kep: "../Pictures/ruha/coreblack/ccoreblackback.pjpg"},
 
-    {id: "cw1", nev: "HOODIE", szin: "Fehér", meret: "S", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
-    {id: "cw2", nev: "HOODIE", szin: "Fehér", meret: "M", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
-    {id: "cw3", nev: "HOODIE", szin: "Fehér", meret: "L", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
-    {id: "cw4", nev: "HOODIE", szin: "Fehér", meret: "XL", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
+    {id: "cw1", nev: "Core c.", szin: "Fehér", meret: "S", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
+    {id: "cw2", nev: "Core c.", szin: "Fehér", meret: "M", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
+    {id: "cw3", nev: "Core c.", szin: "Fehér", meret: "L", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
+    {id: "cw4", nev: "Core c.", szin: "Fehér", meret: "XL", egysegar: 21900, kep: "../Pictures/ruha/corewhite/corewhtieback.jpg"},
 
-    {id: "fc1", nev: "HOODIE", szin: "Fekete", meret: "S", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
-    {id: "fc2", nev: "HOODIE", szin: "Fekete", meret: "M", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
-    {id: "fc3", nev: "HOODIE", szin: "Fekete", meret: "L", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
-    {id: "fc4", nev: "HOODIE", szin: "Fekete", meret: "XL", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
+    {id: "fc1", nev: "Flowers.", szin: "Fekete", meret: "S", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
+    {id: "fc2", nev: "Flowers.", szin: "Fekete", meret: "M", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
+    {id: "fc3", nev: "Flowers.", szin: "Fekete", meret: "L", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
+    {id: "fc4", nev: "Flowers.", szin: "Fekete", meret: "XL", egysegar: 24900, kep: "../Pictures/ruha/flowers/flowerback.jpg"},
 ];
 
 
