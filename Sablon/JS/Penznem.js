@@ -4,6 +4,7 @@ function Penzvaltas(id) {
 }
 
 function Szinvaltas() {
+    ArAtiras();
     let penznem = JSON.parse(localStorage.getItem("penznem"));
     if (penznem == "huf")
     {
