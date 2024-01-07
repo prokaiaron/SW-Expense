@@ -32,8 +32,11 @@ nav a:hover::after{
         width: 100%;
     }
 
+.penznemGomb:hover {
+    background-color: slategray;
+}
 
-
-
-
-
+.penznemGombSelect {
+    background-color: white;
+    color: black;
+}
