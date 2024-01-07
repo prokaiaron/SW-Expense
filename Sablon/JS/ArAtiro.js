@@ -91,7 +91,9 @@ function ArAtiras() {
 
     let termekar = document.querySelector(".termek-ar");
     let termeknev = document.querySelector(".termek-nev");
-    termeknev = termeknev.innerHTML.charAt(0);
+    if (termeknev)
+    {
+        termeknev = termeknev.innerHTML.charAt(0);
 
         if (penznem == "huf") 
         {
@@ -123,5 +125,7 @@ function ArAtiras() {
                 termekar.innerHTML = Math.round(streetar / 380) + "€";
             }
         }
+    }
+    
     
 }
