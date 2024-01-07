@@ -64,17 +64,35 @@
     
     <div  id="szurok" class="container-fluid mx-5 fade-in" >
       <div class="row">
-        <div class="col-lg-4 col-12 justify-content-center">
-            <div class="col-lg-4 col-12" id="szurok">
-            <h4 style="font-family: Poppins, sans-serif;">Collection:</h4>
-            <select id="collectionFilter" onchange="filterProducts()">
-              <option value="">All</option>
-              <option value="core">CORE</option>
-              <option value="flowers">FLOWER</option>
-              <option value="street">STREET HEART</option>
-            </select>
-          </div>
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Collection:</h4>
+        <select id="collectionFilter" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="core">CORE</option>
+          <option value="flowers">FLOWER</option>
+          <option value="street">STREET HEART</option>
+        </select>
         </div>
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Color:</h4>
+        <select id="collectionFilter2" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+        </select>
+        </div>
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Style:</h4>
+        <select id="collectionFilter3" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="hoodie">Hoodie</option>
+          <option value="tshirt">T-shirt ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+        </select>
+        </div>      
+            
+      
        
       </div>
     </div>
@@ -87,39 +105,44 @@
 
   <div style="margin-top: 25px;" class="container-lg fade-in" id="productContainer">
     <div class="row mt-5">
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers" data-collection2="black" data-collection3="hoodie">
         <a href="../flowers_termek/flowers_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""> <br></a>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWERS Collection Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWER Collection Hoodie</p>
         <p class="shop-ar">24900 Ft.</p>
       </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="white" data-collection3="hoodie"> 
         <a href="../core_termékek/core_termékek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br></a>
         <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
         <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
       </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
-        <a href="../core_termékek/core_termékek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br></a>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
-        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
-      </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street" data-collection2="dark" data-collection3="hoodie">
         <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Hearth Dark Hoodie</p>
-        <p class="shop-ar">12000 Ft.</p>
-      </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
-        <a href="../core_termékek/core_termékek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br></a>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
-        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
-      </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
-        <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Heart Dark Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">STREET HEART Dark Hoodie</p>
         <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
       </div>
-      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street" data-collection2="light" data-collection3="hoodie">
         <a href="../street_art_vilagos_termek/str_vilagos_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/vilhat_nobg.png" alt=""> </a><br>
-        <p style="font-family: Poppins, sans-serif;" class="shop-nev">Street Heart Light Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">STREET HEART Light Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="black" data-collection3="hoodie">
+        <a href="../core_termékek/core_termékek copy.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/coreblack/coreblackfront.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION Black Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="black" data-collection3="tshirt">
+        <a href="../core_termékek/core_termékek copy 2.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/coreblack/core black tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION Black T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="white" data-collection3="tshirt">
+        <a href="../core_termékek/core_termékek copy 3.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/core whtie tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION White T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers" data-collection2="black" data-collection3="tshirt">
+        <a href="../flowers_termek/flowers_termek copy.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/Flowers tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWER COLLECTION Black T-shirt</p>
         <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
       </div>
     </div>
@@ -152,14 +175,20 @@
 
   
   <script>
-    function filterProducts() {
+  function filterProducts2() {
   var collectionFilter = document.getElementById("collectionFilter").value.toLowerCase();
+  var collectionFilter2 = document.getElementById("collectionFilter2").value.toLowerCase();
+  var collectionFilter3 = document.getElementById("collectionFilter3").value.toLowerCase();
   var products = document.querySelectorAll(".product-item");
 
   products.forEach(function(product) {
     var productCollection = product.getAttribute("data-collection").toLowerCase();
+    var productCollection2 = product.getAttribute("data-collection2").toLowerCase();
+    var productCollection3 = product.getAttribute("data-collection3").toLowerCase();
 
-    if (collectionFilter === "" || productCollection === collectionFilter) {
+    if ((collectionFilter === "" || productCollection === collectionFilter) && 
+        (collectionFilter2 === "" || productCollection2 === collectionFilter2) &&
+        (collectionFilter3 === "" || productCollection3 === collectionFilter3)) {
       product.style.display = "block";
     } else {
       product.style.display = "none";
@@ -167,7 +196,7 @@
   });
 }
 
-  </script>
+    </script>
   <script>
     function fadeInOnScroll() {
      var fadeInElements = document.querySelectorAll('.fade-in');
