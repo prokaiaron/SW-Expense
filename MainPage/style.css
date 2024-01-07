@@ -96,3 +96,27 @@ body {
     cursor: pointer;
     width: 120px;
 }
+.product-container {
+    margin-top: 50px;
+  }
+  .product-item {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    max-width: 250px; 
+      margin-left: auto;
+      margin-right: auto;
+
+  }
+  .product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+  }
+  .product-name, .product-price {
+    color: #fff;
+    margin-top: 10px
+  }
