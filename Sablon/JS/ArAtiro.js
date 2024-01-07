@@ -12,7 +12,6 @@ function ArAtiras() {
     let shoparak = document.querySelectorAll(".shop-ar")
 
 
-
     for (let i = 0; i < mainnevek.length; i++) {
         let nev = mainnevek[i].textContent.charAt(0);
 
@@ -86,4 +85,43 @@ function ArAtiras() {
             }
         }
     }
+
+
+
+
+    let termekar = document.querySelector(".termek-ar");
+    let termeknev = document.querySelector(".termek-nev");
+    termeknev = termeknev.innerHTML.charAt(0);
+
+        if (penznem == "huf") 
+        {
+            if (termeknev == "F") 
+            {
+                termekar.innerHTML = flowerar + " Ft";
+            }
+            if (termeknev == "C") 
+            {
+                termekar.innerHTML = corear + " Ft";
+            }
+            if (termeknev == "S") 
+            {
+                termekar.innerHTML = streetar + " Ft";
+            }
+        }
+        if (penznem == "eur") 
+        {
+            if (termeknev == "F") 
+            {
+                termekar.innerHTML = Math.round(flowerar / 380) + "€";
+            }
+            if (termeknev == "C") 
+            {
+                termekar.innerHTML = Math.round(corear / 380) + "€";
+            }
+            if (termeknev == "S") 
+            {
+                termekar.innerHTML = Math.round(streetar / 380) + "€";
+            }
+        }
+    
 }
