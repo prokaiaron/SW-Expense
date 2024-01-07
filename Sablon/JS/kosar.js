@@ -3,10 +3,26 @@ const termekek = [
     {id: "ss2", nev: "HOODIE", szin: "Sötétszürke", meret: "M", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
     {id: "ss3", nev: "HOODIE", szin: "Sötétszürke", meret: "L", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
     {id: "ss4", nev: "HOODIE", szin: "Sötétszürke", meret: "XL", egysegar: 12000, kep: "../Pictures/ruha/streetart/grafitti dark back no gb.png"},
+
     {id: "sv1", nev: "HOODIE", szin: "Világosszürke", meret: "S", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
     {id: "sv2", nev: "HOODIE", szin: "Világosszürke", meret: "M", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
     {id: "sv3", nev: "HOODIE", szin: "Világosszürke", meret: "L", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
     {id: "sv4", nev: "HOODIE", szin: "Világosszürke", meret: "XL", egysegar: 15000, kep: "../Pictures/ruha/streetart/vilhat_nobg.png"},
+
+    {id: "cb1", nev: "HOODIE", szin: "Fekete", meret: "S", egysegar: 23900, kep: "../Pictures/ruha/coreblack/ccoreblackback.png"},
+    {id: "cb2", nev: "HOODIE", szin: "Fekete", meret: "M", egysegar: 23900, kep: "../Pictures/ruha/coreblack/ccoreblackback.png"},
+    {id: "cb3", nev: "HOODIE", szin: "Fekete", meret: "L", egysegar: 23900, kep: "../Pictures/ruha/coreblack/ccoreblackback.png"},
+    {id: "cb4", nev: "HOODIE", szin: "Fekete", meret: "XL", egysegar: 23900, kep: "../Pictures/ruha/coreblack/ccoreblackback.png"},
+
+    {id: "cw1", nev: "HOODIE", szin: "Fehér", meret: "S", egysegar: 23900, kep: "../Pictures/ruha/corewhite/corewhtieback.png"},
+    {id: "cw2", nev: "HOODIE", szin: "Fehér", meret: "M", egysegar: 23900, kep: "../Pictures/ruha/corewhite/corewhtieback.png"},
+    {id: "cw3", nev: "HOODIE", szin: "Fehér", meret: "L", egysegar: 23900, kep: "../Pictures/ruha/corewhite/corewhtieback.png"},
+    {id: "cw4", nev: "HOODIE", szin: "Fehér", meret: "XL", egysegar: 23900, kep: "../Pictures/ruha/corewhite/corewhtieback.png"},
+
+    {id: "fc1", nev: "HOODIE", szin: "Fekete", meret: "S", egysegar: 26490, kep: "../Pictures/ruha/flowers/flowerback.png"},
+    {id: "fc2", nev: "HOODIE", szin: "Fekete", meret: "M", egysegar: 26490, kep: "../Pictures/ruha/flowers/flowerback.png"},
+    {id: "fc3", nev: "HOODIE", szin: "Fekete", meret: "L", egysegar: 26490, kep: "../Pictures/ruha/flowers/flowerback.png"},
+    {id: "fc4", nev: "HOODIE", szin: "Fekete", meret: "XL", egysegar: 26490, kep: "../Pictures/ruha/flowers/flowerback.png"},
 ];
 
 
@@ -14,6 +30,8 @@ const termekek = [
 function Feltoltes() {
     let kosar_ids = JSON.parse(localStorage.getItem("kosar")) || [];
     
+    let penznem = JSON.parse(localStorage.getItem("penznem"));
+
     let tablazat = document.getElementById("kosarelemek");
     tablazat.innerHTML = "";
     
@@ -76,7 +94,14 @@ function Feltoltes() {
             sor.appendChild(meret1);
 
             let egysegar1 = document.createElement("td");
-            egysegar1.textContent = termek.egysegar;
+            if (penznem == "huf")
+            {
+                egysegar1.textContent = termek.egysegar;
+            }
+            if (penznem == "eur")
+            {
+                egysegar1.textContent = Math.round(termek.egysegar / 380);
+            }
             egysegar1.setAttribute("style", "vertical-align: middle;");
             let egysegarid = "egysegar" + termek.id;
             egysegar1.setAttribute("id", egysegarid);
@@ -100,7 +125,14 @@ function Feltoltes() {
             sor.appendChild(darab_cella);
 
             let ar1 = document.createElement("td");
-            ar1.textContent = termek.egysegar * mennyiseg;
+            if (penznem == "huf")
+            {
+                ar1.textContent = termek.egysegar * mennyiseg;
+            }
+            if (penznem == "eur")
+            {
+                ar1.textContent = Math.round(termek.egysegar / 380) * mennyiseg;
+            }
             ar1.setAttribute("style", "vertical-align: middle;");
             let vegosszegid = "vegosszeg" + termek.id;
             ar1.setAttribute("id", vegosszegid);
@@ -139,6 +171,17 @@ function Add(id) {
 
 function Vegosszeg() {
     let kosar_ids = JSON.parse(localStorage.getItem("kosar")) || [];
+    let penznem = JSON.parse(localStorage.getItem("penznem"));
+    let penznemvege;
+    if (penznem == "huf")
+    {
+        penznemvege = " Ft";
+    }
+    if (penznem == "eur")
+    {
+        penznemvege = "€";
+    }
+
     let vegosszeg = 0;
     let egyszer = [];
     kosar_ids.forEach(elem => {
@@ -152,5 +195,21 @@ function Vegosszeg() {
         let vegosszegelem = parseInt(document.getElementById(vegosszegid).innerHTML);
         vegosszeg += vegosszegelem;
     });
-    document.getElementById("fizetendo").innerHTML = vegosszeg;
+    document.getElementById("fizetendo").innerHTML = vegosszeg + penznemvege;
+}
+
+function Penzvaltas(id) {
+    localStorage.setItem("penznem", JSON.stringify(id));
+    if (id == "huf")
+    {
+        document.getElementById("hufId").setAttribute("class", "penznemGomb penznemGombSelect");
+        document.getElementById("eurId").setAttribute("class", "penznemGomb");
+    }
+    else
+    {
+        document.getElementById("eurId").setAttribute("class", "penznemGomb penznemGombSelect");
+        document.getElementById("hufId").setAttribute("class", "penznemGomb");
+    }
+    Feltoltes();
+
 }
