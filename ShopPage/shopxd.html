@@ -33,43 +33,49 @@
   </nav>
   <!-- SZŰRŐ -->
   <div class="container-lg">
-    <button type="button" onclick="szuro()" class="btn btn-dark">Dark</button>
-    <div id="szurok" class="container-fluid">
+    <button type="button" onclick="toggleFilter()" class="btn btn-dark">Dark</button>
+    <div id="szurok" class="container-fluid" style="display: none;">
       <div class="row">
         <div class="col-lg-4 col-12 justify-content-center">
             <div class="col-lg-4 col-12" id="szurok">
             <h4>Collection:</h4>
-            <select name="" id="">
-              <option id="core" value="">CORE</option>
-              <option id="flowers" value="">FLOWERS</option>
-              <option id="street" value="">STREET HEARTH</option>
+            <select id="collectionFilter" onchange="filterProducts()">
+              <option value="">All</option>
+              <option value="core">CORE</option>
+              <option value="flowers">FLOWERS</option>
+              <option value="street">STREET HEARTH</option>
             </select>
           </div>
         </div>
-        <div class="col-lg-4 col-12">
-
-        </div>
-        <div class="col-lg-4 col-12">
-
-        </div>
+        <!-- További szűrők itt... -->
       </div>
     </div>
   </div>
 
   <!-- SHOP -->
-  <div style="margin-top: 150px;" class="container-lg">
+  <div style="margin-top: 150px;" class="container-lg" id="productContainer">
     <div class="row mt-5">
-      <div style="text-align: center;" class="col-lg-4 col-6">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""> <br>
         <p>FLOWERS Collection Hoodie</p>
         <p>24.900 Ft.</p>
       </div>
-      <div style="text-align: center;" class="col-lg-4 col-6">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
         <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
         <p>CORE Collection White Hoodie</p>
         <p>21.900 Ft.</p>
       </div>
-      <div style="text-align: center;" class="col-lg-4 col-6">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
+        <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
+        <p>CORE Collection White Hoodie</p>
+        <p>21.900 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core">
+        <img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br>
+        <p>CORE Collection White Hoodie</p>
+        <p>21.900 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street">
         <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
         <p>Street Hearth Dark Hoodie</p>
         <p>12.000 Ft.</p>
@@ -103,21 +109,25 @@
 
   
   <script>
-    
-    let szur = document.getElementById("szurok");
-    //szűrő eltüntetés/megjelenítés function
-    function szuro(){
-      if (szur.style.display = "block")
-      {
-        szur.style.display = "none";
-      }
-      else
-      {
-        szur.style.display = "block";
-      }
+    function toggleFilter() {
+      var szurok = document.getElementById("szurok");
+      szurok.style.display = szurok.style.display === "none" ? "block" : "none";
     }
 
+    function filterProducts() {
+      var collectionFilter = document.getElementById("collectionFilter").value.toLowerCase();
+      var products = document.querySelectorAll(".product-item");
+
+      products.forEach(function(product) {
+        var productCollection = product.getAttribute("data-collection").toLowerCase();
+
+        if (collectionFilter === "" || productCollection === collectionFilter) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
   </script>
-    
 </body>
 </html>
