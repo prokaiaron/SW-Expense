@@ -32,6 +32,10 @@ nav a:hover::after{
         width: 100%;
     }
 
+.penznemGomb {
+    background-color: rgb(56, 56, 56);
+}
+
 .penznemGomb:hover {
     background-color: slategray;
 }
