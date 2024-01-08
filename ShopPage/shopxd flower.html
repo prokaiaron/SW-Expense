@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SW Expense</title>
+    <link rel="stylesheet" href="../Sablon/CSS/alapstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+        }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    .product-image {
+      transition: transform 0.5s;
+    }
+
+    .product-image:hover {
+      transform: scale(1.1);
+    }
+    </style>
+</head>
+<body style="font-family: Poppins, sans-serif;" onload="Szinvaltas(), filterProducts2()">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img style="height: 50px;" src="../Pictures/main/SW_white_no_text.png" alt=""><span class="navbar-brand" href="main.html"><span style="font-weight: bold; text-decoration: line-through">SW</span> Expense</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="../MainPage/main.html">Home</a>
+          <a class="nav-link" href="../Collection/collection.html">Collections</a>
+          <a class="nav-link" href="../ShopPage/shopxd.html">Shop</a>
+          <a class="nav-link" href="../AboutUs/aboutus.html">About us</a>
+          <div class="dropdown">
+            <button class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Currency
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li style="text-align: center; margin-top: 5px;"><div style="width: 40px; display: inline; text-align: end; font-size: 25px; padding: 5px; border-radius: 5px; transition: 0.3s; user-select: none; font-weight: bold;" class="penznemGomb" onclick="Penzvaltas('huf')" id="hufId">HUF</div></li>
+              <li style="text-align: center; margin-top: 10px;"><div style="width: 40px; display: inline; text-align: end; font-size: 25px; padding: 5px; border-radius: 5px; transition: 0.3s; user-select: none; font-weight: bold;" class="penznemGomb" onclick="Penzvaltas('eur')" id="eurId">EUR</div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-lg-0 pt-3 ps-lg-3 ps-0">
+          <a class="nav-link" href="../Kosár/kosar.html"><img src="../Pictures/main/kosar.png" alt="" style="max-width: 40px;"></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <center><div class="fade-in" style="width: 100%; background-color: lightgrey;"><span style="font-size: 50px; font-family: Poppins, sans-serif;">SHOP</span></div></center>
+  <div class="container-lg my-5">
+    
+    <div  id="szurok" class="container-fluid mx-5 fade-in" >
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Collection:</h4>
+        <select id="collectionFilter" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="core" >CORE</option>
+          <option id="flowerid" selected value="flowers">FLOWER</option>
+          <option value="street">STREET HEART</option>
+        </select>
+        </div>
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Color:</h4>
+        <select id="collectionFilter2" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+        </select>
+        </div>
+        <div class="col-lg-4 col-12">
+          <h4 style="font-family: Poppins, sans-serif;">Style:</h4>
+        <select id="collectionFilter3" onchange="filterProducts2()">
+          <option value="">All</option>
+          <option value="hoodie">Hoodie</option>
+          <option value="tshirt">T-shirt ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
+        </select>
+        </div>      
+            
+      
+       
+      </div>
+    </div>
+  </div>
+ <div class="container fade-in">
+  <hr>
+ </div>
+  <!--HA ÚJ TERMÉKET ADTOK HOZZÁ AZ ÁRÁHOZ ÍRJÁTOK BE CLASSNAK HOGY "shop-ar" NÉVNÉL PEDIG "shop-nev"!-->
+  <!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
+
+  <div style="margin-top: 25px;" class="container-lg fade-in" id="productContainer">
+    <div class="row mt-5">
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers" data-collection2="black" data-collection3="hoodie">
+        <a href="../flowers_termek/flowers_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/flowerfront.jpg" alt=""> <br></a>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWER Collection Hoodie</p>
+        <p class="shop-ar">24900 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="white" data-collection3="hoodie"> 
+        <a href="../core_termékek/core_termékek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/corewhitefront.jpg" alt=""> <br></a>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE Collection White Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">21900 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street" data-collection2="dark" data-collection3="hoodie">
+        <a href="../street_art_sotet_termek/str_sotet_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">STREET HEART Dark Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street" data-collection2="light" data-collection3="hoodie">
+        <a href="../street_art_vilagos_termek/str_vilagos_termek.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/vilhat_nobg.png" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">STREET HEART Light Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="black" data-collection3="hoodie">
+        <a href="../core_termékek/core_termékek copy.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/coreblack/coreblackfront.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION Black Hoodie</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="black" data-collection3="tshirt">
+        <a href="../core_termékek/core_termékek copy 2.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/coreblack/core black tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION Black T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="core" data-collection2="white" data-collection3="tshirt">
+        <a href="../core_termékek/core_termékek copy 3.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/corewhite/core whtie tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">CORE COLLECTION White T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="flowers" data-collection2="black" data-collection3="tshirt">
+        <a href="../flowers_termek/flowers_termek copy.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/flowers/Flowers tshirt front.jpg" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">FLOWER COLLECTION Black T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+      <div style="text-align: center;" class="col-lg-4 col-6 product-item" data-collection="street" data-collection2="white" data-collection3="tshirt">
+        <a href="../flowers_termek/flowers_termek copy.html"><img class="img-fluid" style="width: 300px;" src="../Pictures/ruha/streetart/polo/hatul.png" alt=""> </a><br>
+        <p style="font-family: Poppins, sans-serif;" class="shop-nev">STREET ART COLLECTION white T-shirt</p>
+        <p style="font-family: Poppins, sans-serif;" class="shop-ar">12000 Ft.</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div style="background-color: rgb(0, 0, 0); color: white; text-align: center;" class="container-fluid py-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-4 mt-3">
+            <h4>Other sites:</h5>
+            <a style="color: white;" href="../Collection/collection.html">Collections</a> <br>
+            <a style="color: white;" href="../ShopPage/shopxd.html">Shop</a> <br>
+            <a style="color: white;" href="../AboutUs/aboutus.html">About Us</a> <br>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>Check Us On Social Media:</h5>
+            <a style="color: white;" href="https://www.instagram.com/sw_expensehu/">Instagram</a>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>SW Expense</h5>
+            <p>All rights reserved. 2023</p>
+            <img style="height: 150px;" src="../Pictures/main/SW upscale black base.png" alt="">
+          </div>
+        </div>
+      </div>      
+    </div>
+  </footer>
+
+
+  
+  <script>
+  function filterProducts2() {
+  var collectionFilter = document.getElementById("collectionFilter").value.toLowerCase();
+  var collectionFilter2 = document.getElementById("collectionFilter2").value.toLowerCase();
+  var collectionFilter3 = document.getElementById("collectionFilter3").value.toLowerCase();
+  var products = document.querySelectorAll(".product-item");
+
+  products.forEach(function(product) {
+    var productCollection = product.getAttribute("data-collection").toLowerCase();
+    var productCollection2 = product.getAttribute("data-collection2").toLowerCase();
+    var productCollection3 = product.getAttribute("data-collection3").toLowerCase();
+
+    if ((collectionFilter === "" || productCollection === collectionFilter) && 
+        (collectionFilter2 === "" || productCollection2 === collectionFilter2) &&
+        (collectionFilter3 === "" || productCollection3 === collectionFilter3)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+  if(document.getElementById("flowerid" == selected)){
+    if ((collectionFilter === "" || productCollection === collectionFilter) && 
+        (collectionFilter2 === "" || productCollection2 === collectionFilter2) &&
+        (collectionFilter3 === "" || productCollection3 === collectionFilter3)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  }
+}
+
+    </script>
+  <script>
+    function fadeInOnScroll() {
+     var fadeInElements = document.querySelectorAll('.fade-in');
+ 
+     for (var i = 0; i < fadeInElements.length; i++) {
+       var element = fadeInElements[i];
+       var elementTop = element.getBoundingClientRect().top;
+       var windowHeight = window.innerHeight;
+ 
+       if (elementTop < windowHeight) {
+         element.classList.add('show');
+       }
+     }
+   }
+ 
+   document.addEventListener('scroll', fadeInOnScroll);
+   document.addEventListener('DOMContentLoaded', function () {
+     fadeInOnScroll(); 
+     filterProducts(); 
+   });
+   </script>
+   
+
+  <script src="../Sablon/JS/Penznem.js"></script>
+  <script src="../Sablon/JS/ArAtiro.js"></script>
+</body>
+</html>
