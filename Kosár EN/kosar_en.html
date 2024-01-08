@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - SW Expense</title>
+    <title>Cart - SW Expense</title>
     <link rel="stylesheet" href="../Sablon/CSS/index.css">
     <link rel="shortcut icon" href="../Pictures/main/SW_white_no_text.png" type="image/x-icon">
     <link rel="stylesheet" href="../Sablon/CSS/alapstyle.css">
@@ -43,19 +43,19 @@
   </nav>
 
   <div class="container-lg">
-    <h1 class="py-5 text-center">A kosarad tartalma</h1>
+    <h1 class="py-5 text-center">The products in your basket</h1>
     <table id="kosartabla" class="table table-responsive">
       <thead>
         <tr>
           <th></th>
-          <th class="d-none d-md-table-cell">Kép</th>
-          <th>Név</th>
-          <th>Szín</th>
-          <th class="d-none d-md-table-cell">Méret</th>
-          <th class="d-md-none d-table-cell">M.</th>
-          <th class="d-none d-md-table-cell">Egységár</th>
-          <th>Darab</th>
-          <th>Ár</th>
+          <th class="d-none d-md-table-cell">Image</th>
+          <th>Name</th>
+          <th>Color</th>
+          <th class="d-none d-md-table-cell">Size</th>
+          <th class="d-md-none d-table-cell">S.</th>
+          <th class="d-none d-md-table-cell">Price/1</th>
+          <th>Quantity</th>
+          <th>Price</th>
         </tr>
       </thead>
       <tbody id="kosarelemek">
@@ -63,7 +63,7 @@
       </tbody>
     </table>
     <div style="margin-top: 40px; margin-bottom: 40px; background-color: black; color: white; padding: 20px; padding-left: 35px; padding-right: 35px;" class="d-flex">
-      <h3 style="display: inline; margin-right: auto;">Összesen fizetendő: <span id="fizetendo"></span></h3>
+      <h3 style="display: inline; margin-right: auto;">Total price: <span id="fizetendo"></span></h3>
     </div>
   </div>
 
@@ -92,7 +92,7 @@
   </footer>
   </div>
     
-  <script src="../Sablon/JS/kosar.js"></script>
+  <script src="kosar_en.js"></script>
 </body>
 
 </html>
