@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SW Expense</title>
+    <link rel="stylesheet" href="../Sablon/CSS/index.css">
+    <link rel="stylesheet" href="../Sablon/CSS/sliderstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Sablon/CSS/alapstyle.css">
+
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+        }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    .product-image {
+      transition: transform 0.5s;
+    }
+
+    .product-image:hover {
+      transform: scale(1.1);
+    }
+    </style>
+</head>
+<body style="background-color: black; font-family: Poppings, sans-serif;" onload="Szinvaltas()">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img style="height: 50px;" src="../Pictures/main/SW_white_no_text.png" alt=""><span class="navbar-brand" href="main.html"><span style="font-weight: bold; text-decoration: line-through">SW</span> Expense</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="../MainPage/main.html">Home</a>
+          <a class="nav-link" href="../Collection/collection.html">Collections</a>
+          <a class="nav-link" href="../ShopPage/shopxd.html">Shop</a>
+          <a class="nav-link" href="../AboutUs/aboutus.html">About us</a>
+          <div class="dropdown">
+            <button class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Currency
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li style="font-family: Poppins, sans-serif;text-align: center; margin-top: 5px;"><div style="width: 40px; display: inline; text-align: end; font-size: 25px; padding: 5px; border-radius: 5px; transition: 0.3s; user-select: none; font-weight: bold;" class="penznemGomb" onclick="Penzvaltas('huf')" id="hufId">HUF</div></li>
+              <li style="font-family: Poppins, sans-serif;text-align: center; margin-top: 10px;"><div style="width: 40px; display: inline; text-align: end; font-size: 25px; padding: 5px; border-radius: 5px; transition: 0.3s; user-select: none; font-weight: bold;" class="penznemGomb" onclick="Penzvaltas('eur')" id="eurId">EUR</div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-lg-0 pt-3 ps-lg-3 ps-0">
+          <a class="nav-link" href="../Kosár/kosar.html"><img src="../Pictures/main/kosar.png" alt="" style="max-width: 40px;"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    
+    <div class="badi">
+      <div class="slider">
+        <div class="slides">
+  
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+  
+          <div class="slide first">
+            <img class="img-fluid" src="../Pictures/main/CORE COLLECTION banner white.png" alt="">
+          </div>
+          <div class="slide">
+            <img class="img-fluid" src="../Pictures/main/FLOWERS COLLECTION banner.png" alt="">
+          </div>
+          <div class="slide">
+            <img class="img-fluid" src="../Pictures/main/Grafity coll banner.png" alt="">
+          </div>
+  
+          <div class="navigation-auto">
+            <div hidden class="auto-btn1"></div>
+            <div hidden class="auto-btn2"></div>
+            <div hidden class="auto-btn3"></div>
+          </div> 
+          
+        </div>
+        <div  class="position-absolute bottom-0 start-50 translate-middle-x translate-middle-y">
+          <label for="radio1" class="manuel-btn"></label>
+          <label for="radio2" class="manuel-btn"></label>
+          <label for="radio3" class="manuel-btn"></label>
+      </div>
+      </div>
+    </div>
+    <div style="width: 100%; height: 200px; background-color: white;">
+        <center><h1 class="fade-in" style="padding-top: 52px; font-size: 90px; font-family: Poppins, sans-serif;">Kollekcióink</h1></center>
+    </div>
+    <div style="background: rgb(255,255,255); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(83,83,83,1) 50%, rgba(0,0,0,0) 100%);">
+      <div class="container">
+          <div class="row justify-content-center align-items-center">
+              <div class="card col-lg-4 col-md-6 col-12 my-3 mx-5 text-center fade-in">
+                  <img src="../Pictures/main/CORE black standing.png" class="card-img" alt="" style="max-width: 100%;">
+                  <div class="card-body">
+                      <h1 class="card-title">CORE</h1>
+                      <p class="card-sub-title">Első SW Expense design</p>
+                      <p class="card-info">Az indulás</p>
+                      <a href="../Collection/corecoll.html"><button class="card-btn">Vásárlás</button></a>
+                  </div>
+              </div>
+  
+              <div class="card col-lg-4 col-md-6 col-12 my-3 mx-5 text-center fade-in">
+                  <img src="..//Pictures/main/flowers standing.png" class="card-img" alt="" style="max-width: 100%;">
+                  <div class="card-body">
+                      <h1 class="card-title">Flowers</h1>
+                      <p class="card-sub-title">Színes mint a képzeletünk virága</p>
+                      <p class="card-info">Kényelem és stílus a maximumon.</p>
+                      <a href="../Collection/corecoll.html"><button class="card-btn">Vásárlás</button></a>
+                  </div>
+              </div>
+  
+              <div class="card col-lg-4 col-md-12 col-12 my-3 mx-5 text-center fade-in">
+                  <img src="../Pictures/main/street heart standing.png" class="card-img" alt="" style="max-width: 100%;">
+                  <div class="card-body">
+                      <h1 class="card-title">Street Heart</h1>
+                      <p class="card-sub-title">Olyan vadan élj, mint ahogy te szeretnéd</p>
+                      <p class="card-info">Az utca fene gyereke</p>
+                      <a href="../Collection/corecoll.html"><button class="card-btn">Vásárlás</button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div style="width: 100%; height: 200px; background-color: black; margin-top: 10px;" class="fade-in">
+    <center><h1 style="padding-top: 52px; font-size: 90px; font-family: Poppins, sans-serif; color: white;">Termékeink</h1></center>
+  </div>
+    <div class="container-lg product-container fade-in">
+      <div class="row mt-3">
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <img class="img-fluid product-image" src="../Pictures/ruha/flowers/flowerfront-removebg-preview.png" alt="">
+          <p class="product-name">FLOWERS Collection Hoodie</p>
+          <p class="product-price">24900 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <img class="img-fluid product-image" src="../Pictures/ruha/corewhite/corewhitefront-removebg-preview.png" alt="">
+          <p class="product-name">CORE Collection White Hoodie</p>
+          <p class="product-price">21900 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/coreblack/" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div> 
+      
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <img class="img-fluid product-image" src="../Pictures/ruha/flowers/flowerfront-removebg-preview.png" alt="">
+          <p class="product-name">FLOWERS Collection Hoodie</p>
+          <p class="product-price">24900 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <img class="img-fluid product-image" src="../Pictures/ruha/corewhite/corewhitefront-removebg-preview.png" alt="">
+          <p class="product-name">CORE Collection White Hoodie</p>
+          <p class="product-price">21900 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div>
+        <div class="col-lg-3 col-6 mx-1 product-item">
+          <a href="../street_art_sotet_termek/str_sotet_termek.html">
+            <img class="img-fluid product-image" src="../Pictures/ruha/streetart/grafitti dark back no gb.png" alt="">
+          </a>
+          <p class="product-name">Street Heart Dark <br> Hoodie</p>
+          <p class="product-price">12000 Ft.</p>
+        </div>
+        
+      </div>
+    
+    
+
+      <div class="container-lg my-5 fade-in">
+        <div class="row my-5">
+          <div class="col-lg-6 col-12">
+            <center><img class="img-fluid" src="../Pictures/main/insta promo.png" alt=""></center>
+          </div>
+          <div style="text-align: left;" class="col-lg-6 col-12">
+            <h2 style="color: white;" class="mt-5">Check out our <a id="insta" href="https://instagram.com/sw_expensehu">Instagram Page</a> and catch up with latest drops, secret discount codes, collabs and new collections!</h2>
+          </div>
+        </div>
+      </div>
+      
+  
+  <footer>
+    <div style="background-color: rgb(0, 0, 0); color: white; text-align: center;" class="container-fluid py-5">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-4 mt-3">
+            <h4>Other sites:</h5>
+            <a style="color: white;" href="../Collection/collection.html">Collections</a> <br>
+            <a style="color: white;" href="../ShopPage/shopxd.html">Shop</a> <br>
+            <a style="color: white;" href="../AboutUs/aboutus.html">About Us</a> <br>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>Check Us On Social Media:</h5>
+            <a style="color: white;" href="https://www.instagram.com/sw_expensehu/">Instagram</a>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <h4>SW Expense</h5>
+            <p>All rights reserved. 2023</p>
+            <img style="height: 150px;" src="../Pictures/main/SW upscale black base.png" alt="">
+          </div>
+        </div>
+      </div>      
+    </div>
+  </footer>
+  </div>
+    
+</body>
+<script src="../Sablon/JS/Penznem.js"></script>
+<script src="../Sablon/JS/ArAtiro.js"></script>
+<script type="text/javascript">
+  var counter = 1
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter>3){
+      counter = 1;
+    }
+  }, 15000);
+  </script>
+  <script type="text/javascript">
+    var fadeInElements = document.querySelectorAll('.fade-in');
+
+function fadeInOnScroll() {
+    for (var i = 0; i < fadeInElements.length; i++) {
+        var element = fadeInElements[i];
+        var elementTop = element.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight) {
+            element.classList.add('show');
+        }
+    }
+}
+
+document.addEventListener('scroll', fadeInOnScroll);
+document.addEventListener('DOMContentLoaded', function () {
+    fadeInOnScroll(); 
+});
+</script>
+</html>
