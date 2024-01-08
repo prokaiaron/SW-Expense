@@ -19,10 +19,15 @@ var thumbnailItems = document.querySelectorAll('[id^="carousel-selector-"]');
   });
 
 function Kosarba(id) {
-  let Kosar = JSON.parse(localStorage.getItem("kosar")) || [];
-  Kosar.push(id);
-  localStorage.setItem("kosar", JSON.stringify(Kosar));
-  console.log(Kosar);
+  let mennyiseg = document.getElementById("mennyisegKosarba").innerHTML;
+  for (let i = 0; i < mennyiseg; i++)
+  {
+    let Kosar = JSON.parse(localStorage.getItem("kosar")) || [];
+    Kosar.push(id);
+    localStorage.setItem("kosar", JSON.stringify(Kosar));
+    console.log(Kosar);
+  }
+  
 }
 
 let meret = 1;
@@ -40,4 +45,19 @@ function MeretValtas(gombid) {
     meret = 4;
   }
   console.log(gombid);
+}
+
+function mennyisegPlusz() {
+  let current = parseInt(document.getElementById("mennyisegKosarba").innerHTML);
+  uj = current + 1;
+  document.getElementById("mennyisegKosarba").innerHTML = uj;
+}
+
+function mennyisegMinusz() {
+  let current = parseInt(document.getElementById("mennyisegKosarba").innerHTML);
+  if (current > 1)
+  {
+    uj = current - 1;
+  }
+  document.getElementById("mennyisegKosarba").innerHTML = uj;
 }
